@@ -1,9 +1,13 @@
+"""
+How arithmetic operators work
+"""
+
 from numbers import Real
 from math import sqrt
 
 
 class Vector:
-    """This is a class to just see how arithmetic operators and sub work"""
+    """This is a class to just see how arithmetic operators"""
 
     def __init__(self, *components):
         if len(components) < 1:

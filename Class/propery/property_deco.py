@@ -1,3 +1,8 @@
+"""
+How built in decorator property work
+"""
+
+
 class Person:
     """This is a Person object"""
 
@@ -8,7 +13,8 @@ class Person:
             raise ValueError('name is too short. It can not be that short')
         self._name = name
 
-    def get_name(self):
+    @property
+    def name(self):
         """Implement getter and setter so interface will not be affected
         When additional stuff added
 
@@ -17,17 +23,17 @@ class Person:
         """
         return getattr(self, '_name', None)
 
-    def set_name(self, value):
+    @name.setter
+    def name(self, value):
         if not isinstance(value, str):
             raise TypeError('name has to be string')
         if len(value) < 5:
             raise ValueError('name is too short. It can not be that short')
         self._name = value
 
-    def del_name(self):
+    @name.deleter
+    def name(self):
         del self._name
-
-    name = property(fset=set_name, fget=get_name, fdel=del_name, doc="The person's name")
 
 
 if __name__ == '__main__':

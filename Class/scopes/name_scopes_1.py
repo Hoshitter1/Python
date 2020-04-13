@@ -1,3 +1,7 @@
+"""
+Scopes of global, class, methods.
+"""
+
 name = 'Hoshito'
 
 

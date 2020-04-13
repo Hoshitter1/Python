@@ -1,3 +1,8 @@
+"""
+How str and repl work
+"""
+
+
 class Foo:
 
     def __init__(self, name, value):
