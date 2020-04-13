@@ -1,3 +1,8 @@
+"""
+How new method and built in type work
+"""
+
+
 class Squared(int):
 
     def __new__(cls, x):

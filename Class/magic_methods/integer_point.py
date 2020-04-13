@@ -1,3 +1,8 @@
+"""
+How dot(.) notation and name assignment work
+"""
+
+
 class IntegerField:
     def __set_name__(self, owner, name):
         print(f'owner: {owner}')
